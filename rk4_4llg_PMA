@@ -90,7 +90,9 @@ while ct1<sz
     Hk_tmp=abs(Hk(3))*1e4;%Tesla-->Gauss
     Jp=(1e-4)*Hk_tmp*e_tmp*t_tmp*Ms/(hbar_tmp*10);%[A/cm2]
     
-    beta=Je/Jp*b/2;
+    a_parallel=Je/Jp*b/2;
+    epis=0.02;
+    a_perpendicular=a_parallel*epis; %field-like torque coefficient
     
     t(1,1)=0;
     t(1,ct1+1)=t(1,ct1)+n;
@@ -113,9 +115,10 @@ function dmdt=LLG_solver(~,m)
 % t0 is the initial value of t
 % m0 is the initial value of m
 
+    
+    dmdt=-cross(m,hh)-alpha*cross(m,cross(m,hh))-a_parallel*cross(m,...
+    cross(m,p))+alpha*a_parallel*cross(m,p)+a_perpendicular*cross(m,p)+alpha*a_perpendicular*cross(m,cross(m,p));
 
-dmdt=-cross(m,hh)-alpha*cross(m,cross(m,hh))-beta*cross(m,...
-    cross(m,p))+alpha*beta*cross(m,p);
 
 end
 
