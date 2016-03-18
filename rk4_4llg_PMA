@@ -3,10 +3,9 @@
 
 %zzf,Jan.16.2016
 %1. add in torque efficiency slection, same with rk4_4llg_IMA.m
-%zzf,Feb.20.2016
-%1. change mm(3) in spin torque efficiency
+
 %zzf,March.18.2016
-%1.divide 2 in the expression of b. 
+%add in FL torque
 %% input
 % ts is time step, unit [s]
 % num_step is total number of steps
