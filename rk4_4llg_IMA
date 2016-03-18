@@ -23,7 +23,7 @@
 
 
 %function [mmx,mmy,mmz,t]=rk4_4llg(ts,t0,m,sz,Hk,alpha,va_one,p,Je,Hd,Hext)
-function [mmx,mmy,mmz,tt,Icri]=rk4_4llg_PMA(ts,num_step,m_init,Ms,Hk,Hext,...
+function [mmx,mmy,mmz,tt,Icri]=rk4_4llg_IMA(ts,num_step,m_init,Ms,Hk,Hext,...
     alpha,P1,P2,p,Ie,FL_length,FL_width,FL_thickness)
 %% constant
 g = 0; % Gyromagnetic ratio [(rad)/(T.s)]
@@ -62,10 +62,10 @@ while ct1<sz
     hh=hk+hd+hext; %total field
     switch efficiencyselect
         case 1
-            b=1/(-4+((1+P)^3)*(3+mm(3))/(4*(P^(3/2)))); 
+            b=1/(-4+((1+P)^3)*(3+mm(1))/(4*(P^(3/2)))); 
             %Slonswski torque efficiency for GMR
         case 2
-            b=P1/(1+(P1^2)*mm(3));
+            b=P1/(1+(P1^2)*mm(1));
             %Slonswski torque efficiency for TMR 
         case 3
             b=0.8; % fixed torque efficiency
@@ -117,6 +117,5 @@ end
 
 
 end
-
 
 
