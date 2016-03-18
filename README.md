@@ -1,3 +1,8 @@
+to do list
+1. add switch mode (constant current, constant voltage)
+2. add area control (rectangular, ellipse)
+3. add torque efficiency (multi-reflection)
+
 # PMA_LLG
 integrate LLG in PMA materials via RK4 method
 
