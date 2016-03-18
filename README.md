@@ -1,15 +1,15 @@
 # PMA_LLG
 integrate LLG in PMA materials via RK4 method
 
+parameters
 %% dimension
-FL_length=25e-9;FL_width=25*pi*1e-9;FL_thickness=1.4e-9; %free layer geometry [m]
-alpha=0.028;
-P1=0.8;P2=0.3;%[P1:pin layer, P2: free layer]
-kB=1.38e-23;%[J.K-1]
-Ea=56*kB*300;%[J]
-%Ku=8.16e5; %erg/cm3
-Ms=700; %emu/cm3
-
+  FL_length=25e-9;FL_width=25*pi*1e-9;FL_thickness=1.4e-9; %free layer geometry [m]
+  alpha=0.028;
+  P1=0.8;P2=0.3;%[P1:pin layer, P2: free layer]
+  kB=1.38e-23;%[J.K-1]
+  Ea=56*kB*300;%[J]
+  Ms=700; %emu/cm3
+initial states
   theta_init=179.9*pi/180;
   mz=cos(theta_init); %0.1 degree tilt.
   m_init=[sqrt(1-mz^2),0,mz];
