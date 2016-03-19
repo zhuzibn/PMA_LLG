@@ -1,8 +1,8 @@
 %% 4th order Runge Kutta method, for LLG calaulation in PMA MTJ
 % call this function using: [,]=rk4_4llg(,)
 
-%zzf,March.18.2016
-%1.changed based on PMA
+%zzf,March.18,19.2016
+%1.changed based on PMA;2.add in FL torque
 %% input
 % ts is time step, unit [s]
 % num_step is total number of steps
