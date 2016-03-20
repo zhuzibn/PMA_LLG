@@ -12,7 +12,7 @@
 % Hext: applied field, 1-by-3 vector, unit [tesla]
 % alpha: damping constant
 % P1,P2: polarization of free layer and pinned layer
-% p: magnetization of pinned layer, unit 1-by-3 vector
+% p: unit 1-by-3 vector, polarization of STT current, note the reflection type is opposite to m_pin_layer
 % Ie: magnetitude of charge current, unit [Ampere]
 % dimension FL_length,FL_width,FL_thickness, unit [nm]
 
