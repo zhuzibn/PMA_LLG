@@ -1,3 +1,5 @@
+This repository is not maintained, pls refer to new repository "ODE_LLG_integral" for the information of LLG integral (https://github.com/zhuzibn/ODE_LLG_integral.git)
+
 to do list
 1. add switch mode (constant current, constant voltage)
 2. add area control (rectangular, ellipse)
